@@ -16,13 +16,7 @@ jobs:
             run: git submodule update --init --recursive
           - uses: webfactory/ssh-agent@v0.5.3
             with:
-                ssh-private-key: ${-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-QyNTUxOQAAACC0l4DlDvboJ06h1Y+478vRM8bxSwGVJAbnVPZxpgIxBQAAAJgm06B6JtOg
-egAAAAtzc2gtZWQyNTUxOQAAACC0l4DlDvboJ06h1Y+478vRM8bxSwGVJAbnVPZxpgIxBQ
-AAAEB8txT4nBpB1qdhDdiHK4iBVNK9fdsI+kYRJx89KOi9DLSXgOUO9ugnTqHVj7jvy9Ez
-xvFLAZUkBudU9nGmAjEFAAAAE2hoamo1NTAxM0BnbWFpbC5jb20BAg==
------END OPENSSH PRIVATE KEY-----}
+                ssh-private-key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACC0l4DlDvboJ06h1Y+478vRM8bxSwGVJAbnVPZxpgIxBQAAAJgm06B6JtOgegAAAAtzc2gtZWQyNTUxOQAAACC0l4DlDvboJ06h1Y+478vRM8bxSwGVJAbnVPZxpgIxBQAAAEB8txT4nBpB1qdhDdiHK4iBVNK9fdsI+kYRJx89KOi9DLSXgOUO9ugnTqHVj7jvy9EzxvFLAZUkBudU9nGmAjEFAAAAE2hoamo1NTAxM0BnbWFpbC5jb20BAg==
           - name: Run full test
             env:
               GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
